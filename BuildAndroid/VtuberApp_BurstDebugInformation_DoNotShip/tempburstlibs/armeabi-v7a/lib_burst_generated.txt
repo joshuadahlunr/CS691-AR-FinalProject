@@ -1,0 +1,20 @@
+Library: C:\Users\joshuadahl\Documents\VtuberApp\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
+--platform=Android
+--minimum-os-version=
+--backend=burst-llvm-19
+--target=ARMV7A_NEON32
+--global-safety-checks-setting=Off
+--meta-data-generation=False
+--dump=Function
+--float-precision=Standard
+--target-framework=NetFramework
+--generate-link-xml=Temp\burst.link.xml
+--temp-folder=C:\Users\joshuadahl\Documents\VtuberApp\Temp\Burst
+--debug=Full
+--force-disable-frame-info-registration
+--key-folder=C:/Program Files/Unity/Hub/Editor/2022.3.62f3/Editor/Data/PlaybackEngines/AndroidPlayer
+--decode-folder=C:\Users\joshuadahl\Documents\VtuberApp\Library\Burst
+--output=C:\Users\joshuadahl\Documents\VtuberApp\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
+--pdb-search-paths=Temp/ManagedSymbols/
+
+
