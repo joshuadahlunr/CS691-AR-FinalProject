@@ -2,32 +2,38 @@
 using UnityEditor;
 #endif
 using System.Collections;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour {
 #if UNITY_EDITOR
-    public SceneAsset scene1Asset, scene2Asset, mainMenuAsset; // Drag scene here in Inspector
+    public SceneAsset CoversSceneAsset, PokeballSceneAsset, ZenSceneAsset, RezeSceneAsset, CreditsSceneAsset, mainMenuAsset; // Drag scene here in Inspector
 #endif
 
-    [SerializeField] private string scene1, scene2, mainMenu; // Used in builds
+    [SerializeField] private string CoversScene, PokeballScene, ZenScene, RezeScene, CreditsScene, mainMenu; // Used in builds
     
     //public AudioSource backgroundMusic;
 
 #if UNITY_EDITOR
     private void OnValidate()
     {
-        //if (scene1Asset != null)
-        //    scene1 = scene1Asset.name; // Store name for runtime
-        //if (scene2Asset != null)
-        //    scene2 = scene2Asset.name; // Store name for runtime
+        if (CoversSceneAsset != null)
+            CoversScene = CoversSceneAsset.name; // Store name for runtime
+        if (PokeballSceneAsset != null)
+            PokeballScene = PokeballSceneAsset.name; // Store name for runtime
+        if (ZenSceneAsset != null)
+            ZenScene = ZenSceneAsset.name; // Store name for runtime
+        if (RezeSceneAsset != null)
+            RezeScene = RezeSceneAsset.name; // Store name for runtime
+        if (CreditsSceneAsset != null)
+            CreditsScene = CreditsSceneAsset.name; // Store name for runtime
         if (mainMenuAsset != null)
             mainMenu = mainMenuAsset.name; // Store name for runtime
     }
 #endif
 
-    IEnumerator LoadScene(string sceneName)
-    {
+    IEnumerator LoadScene(string sceneName) {
         var unloaders = FindObjectsByType<SceneUnloader>(FindObjectsSortMode.None);
         foreach(SceneUnloader unloader in unloaders)
             unloader.Unload();
@@ -36,12 +42,21 @@ public class SceneManager : MonoBehaviour {
         // UnityEngine.SceneManagement.SceneManager.SetActiveScene(UnityEngine.SceneManagement.SceneManager.GetSceneByName(sceneName));
     } 
 
-    //public void loadScene1() {
-    //    StartCoroutine(LoadScene(scene1));
-    //}
-    //public void loadScene2() {
-    //    StartCoroutine(LoadScene(scene2));
-    //}
+    public void loadCoversScene() {
+        StartCoroutine(LoadScene(CoversScene));
+    }
+    public void loadPokeballScene() {
+        StartCoroutine(LoadScene(PokeballScene));
+    }
+    public void loadZenScene() {
+        StartCoroutine(LoadScene(ZenScene));
+    }
+    public void loadRezeScene() {
+        StartCoroutine(LoadScene(RezeScene));
+    }
+    public void loadCreditsScene() {
+        StartCoroutine(LoadScene(CreditsScene));
+    }
     public void loadMainMenu() {
         StartCoroutine(LoadScene(mainMenu));
     }

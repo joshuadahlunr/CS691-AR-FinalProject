@@ -14,6 +14,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Vtuber.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Covers.unity
+    guid: ed455522b9de184488ccd9b78508f743
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 6516de2cf55a4b342a5e0bbe4f3207bb
+  - enabled: 1
+    path: Assets/Scenes/Pokeball.unity
+    guid: 44813ecfe3d151447b59aad314332037
+  - enabled: 1
+    path: Assets/Scenes/RezeDance.unity
+    guid: abc7287dcd9a9814298d5c3522c163c0
+  - enabled: 1
+    path: Assets/Scenes/ZenTown.unity
+    guid: 181f7ab0b2c1d86449d17ecadb048678
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: ea8afb043d6b8454e94e3cd8f101a3e3, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 66078c7dd93cdc344a820f8d6a0ef8cc, type: 2}

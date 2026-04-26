@@ -2,34 +2,20 @@ using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class MainMenuEvents : MonoBehaviour
-{
-
-    public GameObject settingsPanel;
-    
-    private GestureManager gestureManager;
-    
-    public void OnEnable() {
-        gestureManager = FindObjectsByType<GestureManager>(FindObjectsInactive.Include, FindObjectsSortMode.None)[0];
-        gestureManager.swipe.AddListener(OnSwipe);
-        gestureManager.pinch.AddListener(OnPinch);
-    }
-    
-    public void OnDisable() {
-        gestureManager.swipe.RemoveListener(OnSwipe);
-        gestureManager.pinch.RemoveListener(OnPinch);
-    }
-
+public class MainMenuEvents : MonoBehaviour {
     public void OnCoversClicked() {
         Debug.Log("Covers");
+        FindObjectsByType<SceneManager>(FindObjectsInactive.Include, FindObjectsSortMode.None)[0].loadCoversScene();
     }
     
     public void OnPokeballClicked() {
         Debug.Log("Pokeball");
+        FindObjectsByType<SceneManager>(FindObjectsInactive.Include, FindObjectsSortMode.None)[0].loadPokeballScene();
     }
     
     public void OnZenClicked() {
         Debug.Log("Zen");
+        FindObjectsByType<SceneManager>(FindObjectsInactive.Include, FindObjectsSortMode.None)[0].loadZenScene();
     }
     
     public void OnMikuClicked() {
@@ -38,23 +24,15 @@ public class MainMenuEvents : MonoBehaviour
     
     public void OnRezeClicked() {
         Debug.Log("Reze");
+        FindObjectsByType<SceneManager>(FindObjectsInactive.Include, FindObjectsSortMode.None)[0].loadRezeScene();
     }
     
     public void OnCreditsClicked() {
         Debug.Log("Credits");
+        FindObjectsByType<SceneManager>(FindObjectsInactive.Include, FindObjectsSortMode.None)[0].loadCreditsScene();
     }
     
     public void OnWizardClicked() {
         Debug.Log("Wizard");
-    }
-
-    public void OnSwipe(GestureManager.SwipeDirection swipeDirection) {
-        settingsPanel.SetActive(false);
-    }
-
-    public void OnPinch(float delta) {
-        if (delta > 300) return;
-        
-        settingsPanel.SetActive(true);
     }
 }
