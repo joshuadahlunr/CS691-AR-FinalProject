@@ -28,7 +28,7 @@ namespace Mediapipe.Unity.Sample.UI
     {
       _solutionGrid = transform.Find(_GridPath);
 
-      var solutionCount = SceneManager.sceneCountInBuildSettings;
+      var solutionCount = UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings;
       Transform currentRow = null;
 
       for (var i = 0; i < solutionCount; i++)
@@ -83,7 +83,7 @@ namespace Mediapipe.Unity.Sample.UI
 
     private IEnumerator LoadSceneAsync(int buildIndex)
     {
-      var sceneLoadReq = SceneManager.LoadSceneAsync(buildIndex);
+      var sceneLoadReq = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(buildIndex);
       yield return new WaitUntil(() => sceneLoadReq.isDone);
     }
   }
