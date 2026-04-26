@@ -52,6 +52,7 @@ public class CameraFeed : MonoBehaviour
     private void Awake() {
         _rawImage = GetComponent<RawImage>();
     }
+    
     private IEnumerator Start() {
     #if UNITY_EDITOR || UNITY_STANDALONE
         // No permission API needed on Editor / Standalone — go straight to init.
