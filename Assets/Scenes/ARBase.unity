@@ -197,7 +197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22400762, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000045776367
+      value: -0.0000076293945
       objectReference: {fileID: 0}
     - target: {fileID: 22426080, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -473,7 +473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2369662702609791303, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_fontSize
-      value: 4.8
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 2369662702609791303, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
@@ -509,7 +509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8949468901311314302, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_fontSize
-      value: 13.7
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8949468901311314302, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
@@ -554,13 +554,19 @@ MonoBehaviour:
   ZenSceneAsset: {fileID: 102900000, guid: 181f7ab0b2c1d86449d17ecadb048678, type: 3}
   RezeSceneAsset: {fileID: 102900000, guid: abc7287dcd9a9814298d5c3522c163c0, type: 3}
   CreditsSceneAsset: {fileID: 102900000, guid: 6516de2cf55a4b342a5e0bbe4f3207bb, type: 3}
+  MikuSceneAsset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
   mainMenuAsset: {fileID: 102900000, guid: 26b2ceaf53ab48141a3f1eb27c2ac3cd, type: 3}
+  arBaseAsset: {fileID: 102900000, guid: 331ae2efbc18c9a4890b225275c9ba83, type: 3}
   CoversScene: Covers
   PokeballScene: Pokeball
   ZenScene: ZenTown
   RezeScene: RezeDance
   CreditsScene: Credits
+  MikuScene: Vtuber
   mainMenu: MainMenu
+  arBase: ARBase
+  audio: {fileID: 1962528269}
+  currentlyLoadedScene: 
 --- !u!4 &1670454286
 Transform:
   m_ObjectHideFlags: 0
@@ -687,11 +693,61 @@ MonoBehaviour:
   swipe:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1962528268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1962528270}
+  - component: {fileID: 1962528269}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1962528269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962528268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb535df96b1294648b2cb7c0d4da3c67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  musicClips:
+  - name: Merry-Go-Round-Of-Life
+    clip: {fileID: 8300000, guid: 521ab98581ea8184b9e77868af0a501b, type: 3}
+  uiSoundFxClips: []
+  soundFxClips: []
+--- !u!4 &1962528270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962528268}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1069888278}
   - {fileID: 1670454286}
+  - {fileID: 1962528270}
   - {fileID: 1961888341}
   - {fileID: 1256559117}

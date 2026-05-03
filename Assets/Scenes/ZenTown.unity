@@ -564,6 +564,7 @@ GameObject:
   - component: {fileID: 1871046989}
   - component: {fileID: 1871046988}
   - component: {fileID: 1871046991}
+  - component: {fileID: 1871046992}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -616,6 +617,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 680bb7356e277304e8f2717d7cbb36e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneUnloader
+--- !u!114 &1871046992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871046987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41f3ccd1687eedf46898df7ec267ad6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetSceneAudio
+  musicClips:
+  - name: Zenji
+    clip: {fileID: 8300000, guid: 695495e6e5a916842a2c81452e5ba9d3, type: 3}
+  fadeDuration: 3
 --- !u!1001 &1928677205
 PrefabInstance:
   m_ObjectHideFlags: 0

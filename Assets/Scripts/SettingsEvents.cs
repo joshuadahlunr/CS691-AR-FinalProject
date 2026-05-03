@@ -20,7 +20,7 @@ public class SettingsEvents : MonoBehaviour {
         if(settingsPanel.activeInHierarchy)
             settingsPanel.SetActive(false);
         else if(swipeDirection == GestureManager.SwipeDirection.Right) 
-            FindObjectsByType<SceneManager>(FindObjectsInactive.Include, FindObjectsSortMode.None)[0].loadMainMenu();
+            FindObjectsByType<SceneManager>(FindObjectsInactive.Include, FindObjectsSortMode.None)[0].reset();
     }
 
     public void OnPinch(float delta) {

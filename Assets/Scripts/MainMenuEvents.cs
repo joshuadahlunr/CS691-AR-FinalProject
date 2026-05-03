@@ -20,6 +20,7 @@ public class MainMenuEvents : MonoBehaviour {
     
     public void OnMikuClicked() {
         Debug.Log("Miku");
+        FindObjectsByType<SceneManager>(FindObjectsInactive.Include, FindObjectsSortMode.None)[0].loadMikuScene();
     }
     
     public void OnRezeClicked() {
