@@ -14,6 +14,7 @@ public class SceneManager : MonoBehaviour {
 
     [SerializeField] private string CoversScene, PokeballScene, ZenScene, RezeScene, CreditsScene, MikuScene, mainMenu, arBase; // Used in builds
     
+    public bool loadMainMenuOnStart = true;
     public AudioManager audio;
     public string currentlyLoadedScene = "";
 
@@ -93,6 +94,6 @@ public class SceneManager : MonoBehaviour {
     }
 
     public void Awake() {
-        loadMainMenu();
+        if(loadMainMenuOnStart) loadMainMenu();
     }
 }

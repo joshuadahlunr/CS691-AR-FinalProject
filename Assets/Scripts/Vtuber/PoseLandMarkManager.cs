@@ -42,6 +42,7 @@ public class PoseLandmarkerManager : MonoBehaviour {
 
     [Tooltip("Overlay Canvas/RectTransform for drawing landmarks")]
     public RectTransform poseOverlay;
+    public PoseWorldMapper poseWorldMapper;
     
     [Header("Inference Resolution")]
     [Tooltip("Width fed to MediaPipe. Webcam display is unaffected.")]
@@ -58,7 +59,7 @@ public class PoseLandmarkerManager : MonoBehaviour {
     private bool                    _readbackPending;
  
     // Latest completed inference result (written from readback callback)
-    private PoseLandmarkerResult _latestResult;
+    public PoseLandmarkerResult latestResult;
     private bool                 _resultReady;
     
 
@@ -66,16 +67,15 @@ public class PoseLandmarkerManager : MonoBehaviour {
     private PoseLandmarker     _landmarker;
     private Texture2D          _inputTexture;
     private PoseDrawer         _poseDrawer;
-
-    private float _prevTime;
+    
     private int   _screenshotIndex;
 
     // ── Unity Lifecycle ───────────────────────────────────────────────────────
     private IEnumerator Start() {
         yield return InitLandmarker();
 
-        _poseDrawer = new PoseDrawer(poseOverlay, true);
-        _prevTime   = Time.realtimeSinceStartup;
+        if(poseOverlay)
+            _poseDrawer = new PoseDrawer(poseOverlay, true);
         _srcNative = new NativeArray<Color32>(8, Allocator.Persistent, NativeArrayOptions.UninitializedMemory);
         _dstNative = new NativeArray<Color32>(inferenceWidth * inferenceHeight, Allocator.Persistent, NativeArrayOptions.UninitializedMemory);
     }
@@ -104,26 +104,25 @@ public class PoseLandmarkerManager : MonoBehaviour {
         // AsyncGPUReadback.Request returns immediately; the callback fires
         // 1-2 frames later when the GPU has finished writing the pixels.
         // This means zero CPU stall -- the main thread is never blocked.
-        if (webcamTexture.didUpdateThisFrame && !_readbackPending)
-        {
+        if (webcamTexture.didUpdateThisFrame && !_readbackPending) {
             _readbackRequest = AsyncGPUReadback.Request(
                 webcamTexture,
-                0,                          // mip level
+                0, // mip level
                 // TextureFormat.RGBA32,
                 OnReadbackComplete);        // called from main thread when ready
             _readbackPending = true;
         }
  
         // --- Draw the latest result (decoupled from readback cadence) -------
-        if (_resultReady)
-        {
-            float fps = 1f / Mathf.Max(Time.realtimeSinceStartup - _prevTime, 1e-6f);
-            _prevTime = Time.realtimeSinceStartup;
-            _poseDrawer.Draw(_latestResult,
+        if (!_resultReady) return;
+        if (!(poseOverlay || poseWorldMapper)) return;
+        
+        if(poseOverlay)
+            _poseDrawer.Draw(latestResult,
                 webcamTexture.width, webcamTexture.height,
-                fps, true);
-            _resultReady = false;
-        }
+                1f/Time.deltaTime, true);
+        if (poseWorldMapper) poseWorldMapper.UpdateLandmarks(latestResult);
+        _resultReady = false;
     }
     
     // -----------------------------------------------------------------------
@@ -157,14 +156,12 @@ public class PoseLandmarkerManager : MonoBehaviour {
         int dstW = inferenceWidth;
         int dstH = inferenceHeight;
  
-        for (int dstY = 0; dstY < dstH; dstY++)
-        {
+        for (int dstY = 0; dstY < dstH; dstY++) {
             // Flip Y: dstY=0 should map to the TOP of the source image.
             // Source rows are bottom-up, so top of image = last row in buffer.
             int srcY = (srcH - 1) - Mathf.RoundToInt((float)dstY / (dstH - 1) * (srcH - 1));
  
-            for (int dstX = 0; dstX < dstW; dstX++)
-            {
+            for (int dstX = 0; dstX < dstW; dstX++) {
                 int srcX = Mathf.RoundToInt((float)dstX / (dstW - 1) * (srcW - 1));
                 _dstNative[dstY * dstW + dstX] = _srcNative[srcY * srcW + srcX];
             }
@@ -185,26 +182,23 @@ public class PoseLandmarkerManager : MonoBehaviour {
             // _dstNative.Reinterpret<byte>());
  
         long tsMs    = (long)(Time.realtimeSinceStartup * 1000);
-        _latestResult = _landmarker.DetectForVideo(mpImage, tsMs);
+        latestResult = _landmarker.DetectForVideo(mpImage, tsMs);
         _resultReady  = true;
     }
 
-    private void OnDestroy()
-    {
+    private void OnDestroy() {
         _landmarker?.Close();
         if (webcamTexture != null && webcamTexture.isPlaying)
             webcamTexture.Stop();
     }
 
-    private IEnumerator InitLandmarker()
-    {
+    private IEnumerator InitLandmarker() {
         string modelPath = System.IO.Path.Combine(Application.streamingAssetsPath, modelFileName);
 
 #if UNITY_ANDROID && !UNITY_EDITOR
         // On Android, StreamingAssets are inside a .apk — copy to persistentDataPath first
         modelPath = System.IO.Path.Combine(Application.persistentDataPath, modelFileName);
-        if (!System.IO.File.Exists(modelPath))
-        {
+        if (!System.IO.File.Exists(modelPath)) {
             var loader = UnityEngine.Networking.UnityWebRequest.Get(
                 System.IO.Path.Combine(Application.streamingAssetsPath, modelFileName));
             yield return loader.SendWebRequest();
