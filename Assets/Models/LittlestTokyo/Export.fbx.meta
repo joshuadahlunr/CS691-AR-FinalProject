@@ -3,7 +3,77 @@ guid: 8546a04e27330bd43b08cebaf636f565
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #5511
+    second: {fileID: 2100000, guid: b26145bcb22a4da4899fb2aa7a5576d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #5512
+    second: {fileID: 2100000, guid: b26145bcb22a4da4899fb2aa7a5576d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #5516
+    second: {fileID: 2100000, guid: b26145bcb22a4da4899fb2aa7a5576d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #5518
+    second: {fileID: 2100000, guid: b26145bcb22a4da4899fb2aa7a5576d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic_Soft
+    second: {fileID: 2100000, guid: b26145bcb22a4da4899fb2aa7a5576d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: alpha
+    second: {fileID: 2100000, guid: 3b9b9286f1035f94f80a2bf99f384e6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: alpha_glass
+    second: {fileID: 2100000, guid: 3b9b9286f1035f94f80a2bf99f384e6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass_transp
+    second: {fileID: 2100000, guid: 3b9b9286f1035f94f80a2bf99f384e6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glassmat
+    second: {fileID: 2100000, guid: 3b9b9286f1035f94f80a2bf99f384e6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: interiors
+    second: {fileID: 2100000, guid: 040fb2ad7849b6c4b99af2ba6d6d0218, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metalmat
+    second: {fileID: 2100000, guid: 2fb7935493ff7b547aa288b0995c2b36, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: normal
+    second: {fileID: 2100000, guid: b26145bcb22a4da4899fb2aa7a5576d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: outline
+    second: {fileID: 2100000, guid: b26145bcb22a4da4899fb2aa7a5576d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paintmat
+    second: {fileID: 2100000, guid: b26145bcb22a4da4899fb2aa7a5576d1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
