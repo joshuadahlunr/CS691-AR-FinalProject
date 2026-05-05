@@ -539,6 +539,7 @@ MonoBehaviour:
   musicClips:
   - name: Merry Go Round of Life
     clip: {fileID: 8300000, guid: 521ab98581ea8184b9e77868af0a501b, type: 3}
+  fadeDuration: 3
 --- !u!1 &415214872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1997,6 +1998,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2062001274}
     m_Modifications:
+    - target: {fileID: 1591319277547732946, guid: 987128b13ecf9ba4f8813fd746947916, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591319277547732946, guid: 987128b13ecf9ba4f8813fd746947916, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591319277547732946, guid: 987128b13ecf9ba4f8813fd746947916, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2390934457654193315, guid: 987128b13ecf9ba4f8813fd746947916, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.175
+      objectReference: {fileID: 0}
+    - target: {fileID: 2390934457654193315, guid: 987128b13ecf9ba4f8813fd746947916, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2390934457654193315, guid: 987128b13ecf9ba4f8813fd746947916, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.175
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466397630275812284, guid: 987128b13ecf9ba4f8813fd746947916, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466397630275812284, guid: 987128b13ecf9ba4f8813fd746947916, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125393483505088667, guid: 987128b13ecf9ba4f8813fd746947916, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4126267789556886030, guid: 987128b13ecf9ba4f8813fd746947916, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2080,6 +2117,14 @@ PrefabInstance:
     - target: {fileID: 8967298431162238521, guid: 987128b13ecf9ba4f8813fd746947916, type: 3}
       propertyPath: m_Name
       value: Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 9132235532798395967, guid: 987128b13ecf9ba4f8813fd746947916, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.175
+      objectReference: {fileID: 0}
+    - target: {fileID: 9132235532798395967, guid: 987128b13ecf9ba4f8813fd746947916, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

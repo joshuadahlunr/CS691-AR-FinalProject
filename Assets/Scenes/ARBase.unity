@@ -197,7 +197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22400762, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000076293945
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 22426080, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -473,7 +473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2369662702609791303, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_fontSize
-      value: 16
+      value: 4.8
       objectReference: {fileID: 0}
     - target: {fileID: 2369662702609791303, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
@@ -727,6 +727,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 521ab98581ea8184b9e77868af0a501b, type: 3}
   uiSoundFxClips: []
   soundFxClips: []
+  mixerGroup: {fileID: 24300002, guid: 736929e7d6057dc47a0a78d10ce9501c, type: 2}
 --- !u!4 &1962528270
 Transform:
   m_ObjectHideFlags: 0

@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7065479949966669717, guid: 4f49639b5b5e0754eaedcbc92ddbf34a, type: 3}
       propertyPath: m_Name
-      value: NarutoCoverFull
+      value: NarutoCover
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
