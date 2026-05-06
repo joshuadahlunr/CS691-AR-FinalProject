@@ -1,0 +1,9 @@
+{
+  "samples": [
+    {
+      "displayName": "XR Interaction Sample",
+      "description": "Contains components to use ManoMotion SDK to control XR Interactors.",
+      "path": "Samples~/ManoMotion OpenXR"
+    }
+  ]
+}
