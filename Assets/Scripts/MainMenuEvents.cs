@@ -35,5 +35,6 @@ public class MainMenuEvents : MonoBehaviour {
     
     public void OnWizardClicked() {
         Debug.Log("Wizard");
+        FindObjectsByType<SceneManager>(FindObjectsInactive.Include, FindObjectsSortMode.None)[0].loadHandMagicScene();
     }
 }

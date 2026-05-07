@@ -9,10 +9,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour {
 #if UNITY_EDITOR
-    public SceneAsset CoversSceneAsset, PokeballSceneAsset, ZenSceneAsset, RezeSceneAsset, CreditsSceneAsset, MikuSceneAsset, mainMenuAsset, arBaseAsset; // Drag scene here in Inspector
+    public SceneAsset CoversSceneAsset, PokeballSceneAsset, ZenSceneAsset, RezeSceneAsset, CreditsSceneAsset, MikuSceneAsset, HandMagicSceneAsset, mainMenuAsset, arBaseAsset; // Drag scene here in Inspector
 #endif
 
-    [SerializeField] private string CoversScene, PokeballScene, ZenScene, RezeScene, CreditsScene, MikuScene, mainMenu, arBase; // Used in builds
+    [SerializeField] private string CoversScene, PokeballScene, ZenScene, RezeScene, CreditsScene, MikuScene, HandMagicScene, mainMenu, arBase; // Used in builds
     
     public bool loadMainMenuOnStart = true;
     public AudioManager audio;
@@ -32,6 +32,8 @@ public class SceneManager : MonoBehaviour {
             CreditsScene = CreditsSceneAsset.name; // Store name for runtime
         if (MikuSceneAsset != null)
             MikuScene = MikuSceneAsset.name; // Store name for runtime
+        if (HandMagicSceneAsset != null)
+            HandMagicScene = HandMagicSceneAsset.name; // Store name for runtime
         if (mainMenuAsset != null)
             mainMenu = mainMenuAsset.name; // Store name for runtime
         if (arBaseAsset != null)
@@ -91,6 +93,10 @@ public class SceneManager : MonoBehaviour {
 
     public void loadMikuScene() {   
         StartCoroutine(LoadScene(MikuScene));
+    }
+
+    public void loadHandMagicScene() {
+        StartCoroutine(LoadScene(HandMagicScene));
     }
 
     public void Awake() {

@@ -473,7 +473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2369662702609791303, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_fontSize
-      value: 4.8
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 2369662702609791303, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
@@ -555,6 +555,7 @@ MonoBehaviour:
   RezeSceneAsset: {fileID: 102900000, guid: abc7287dcd9a9814298d5c3522c163c0, type: 3}
   CreditsSceneAsset: {fileID: 102900000, guid: 6516de2cf55a4b342a5e0bbe4f3207bb, type: 3}
   MikuSceneAsset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+  HandMagicSceneAsset: {fileID: 102900000, guid: 65b690b5b7d02a04897cac7d39d2a2c9, type: 3}
   mainMenuAsset: {fileID: 102900000, guid: 26b2ceaf53ab48141a3f1eb27c2ac3cd, type: 3}
   arBaseAsset: {fileID: 102900000, guid: 331ae2efbc18c9a4890b225275c9ba83, type: 3}
   CoversScene: Covers
@@ -563,8 +564,10 @@ MonoBehaviour:
   RezeScene: RezeDance
   CreditsScene: Credits
   MikuScene: Vtuber
+  HandMagicScene: HandMagic
   mainMenu: MainMenu
   arBase: ARBase
+  loadMainMenuOnStart: 1
   audio: {fileID: 1962528269}
   currentlyLoadedScene: 
 --- !u!4 &1670454286
