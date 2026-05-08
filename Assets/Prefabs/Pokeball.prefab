@@ -56,5 +56,29 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 3989331213103629222, guid: 817cc780f14775a478106fba252324cd, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2366720456598070969, guid: 817cc780f14775a478106fba252324cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5887392415935740586}
   m_SourcePrefab: {fileID: 100100000, guid: 817cc780f14775a478106fba252324cd, type: 3}
+--- !u!1 &8618509835521669085 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2366720456598070969, guid: 817cc780f14775a478106fba252324cd, type: 3}
+  m_PrefabInstance: {fileID: 6287973679529136484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5887392415935740586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8618509835521669085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41f3ccd1687eedf46898df7ec267ad6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetSceneAudio
+  musicClips:
+  - name: Pokerap
+    clip: {fileID: 8300000, guid: a351a60f232195949989c664c7e36e1f, type: 3}
+  fadeDuration: 3

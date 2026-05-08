@@ -37,4 +37,11 @@ public class MainMenuEvents : MonoBehaviour {
         Debug.Log("Wizard");
         FindObjectsByType<SceneManager>(FindObjectsInactive.Include, FindObjectsSortMode.None)[0].loadHandMagicScene();
     }
+
+    public void OnExitClicked() {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        Application.Quit();
+    }
 }
