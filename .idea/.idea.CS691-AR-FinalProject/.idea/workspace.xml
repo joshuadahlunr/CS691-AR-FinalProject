@@ -3,16 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="564fc523-e66b-4995-b604-41f20fffc1e4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CS691-AR-FinalProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CS691-AR-FinalProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ManoMotion/Settings/ManoMotionURP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ManoMotion/Settings/ManoMotionURP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ARBase.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ARBase.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HandMagic.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HandMagic.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenuEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenuEvents.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Covers/PokemonReferenceImageLibrary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Covers/PokemonReferenceImageLibrary.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PokeballFull.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PokeballFull.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PokemonCover.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PokemonCover.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Pokeball.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Pokeball.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ZenTown.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ZenTown.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultipleImagesTrackingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultipleImagesTrackingManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Textures/Covers/ReferenceImageLibrary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Covers/ReferenceImageLibrary.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XR/UserSimulationSettings/Resources/XRSimulationPreferences.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/UserSimulationSettings/Resources/XRSimulationPreferences.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XR/UserSimulationSettings/SimulationEnvironmentAssetsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/UserSimulationSettings/SimulationEnvironmentAssetsManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +25,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6567e2a645a94ef68fffcf0e5cb82d14212a00/b9/79941298/RefreshRate.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6567e2a645a94ef68fffcf0e5cb82d14212a00/f3/dbdb7b96/Color.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/77d7d8fb98054282be664e4dd39f255d2b400/e8/814a2924/Physics.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HandMagic/HandGestureTracker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Vtuber/PoseWorldMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/TMP/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
@@ -49,6 +50,7 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -100,6 +102,8 @@
       <workItem from="1777926992262" duration="7341000" />
       <workItem from="1778016231453" duration="6335000" />
       <workItem from="1778106486135" duration="5925000" />
+      <workItem from="1778180162561" duration="8380000" />
+      <workItem from="1778444763441" duration="4376000" />
     </task>
     <servers />
   </component>
